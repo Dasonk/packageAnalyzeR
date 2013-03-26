@@ -1,0 +1,11 @@
+Package: packageAnalyzeR
+Type: Package
+Title: Analyzes the source code for R packages
+Version: 1.0
+Date: 2013-03-25
+Author: Dason Kurkiewicz
+Maintainer: Dason Kurkiewicz <dasonk@iastate.edu>
+Description: analyzes the source code for R packages.
+License: GPL-3
+Collate:
+    'downloadAndExtract.R'
