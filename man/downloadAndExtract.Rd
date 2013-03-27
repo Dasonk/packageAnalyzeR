@@ -14,6 +14,8 @@
   the location of the extracted code.
 }
 \examples{
+\dontrun{
 downloadAndExtract("reshape2")
+}
 }
 

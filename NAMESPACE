@@ -1,1 +1,4 @@
+export(analyzePackage)
+export(contains_underscores)
 export(downloadAndExtract)
+export(isCamelCase)

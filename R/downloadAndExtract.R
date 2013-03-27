@@ -8,11 +8,14 @@
 #' 
 #' @export
 #' @examples
+#' \dontrun{
 #' downloadAndExtract("reshape2")
+#' }
 downloadAndExtract <- function(package){
     tdir <- tempdir()
     down <- download.packages(package, destdir = tdir)
     targz <- down[,2]
-    untar(targz)
+    untar(targz, exdir = tdir)
     file.path(tdir, package)
 }
+ 
