@@ -13,9 +13,16 @@
 #' }
 downloadAndExtract <- function(package){
     tdir <- tempdir()
-    down <- download.packages(package, destdir = tdir)
-    targz <- down[,2]
+    downloadeddir <- file.path(tdir, "downloaded_packages")
+    file <- grep(paste0("^", package), dir(downloadeddir), value = T)
+    if(length(file) == 1){
+        targz <- file.path(downloadeddir, file)
+    }else{
+        down <- download.packages(package, destdir = tdir)
+        targz <- down[,2]
+    }
+    
+    
     untar(targz, exdir = tdir)
     file.path(tdir, package)
 }
- 

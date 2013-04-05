@@ -1,4 +1,4 @@
-readRFile <- function(file, basedir){
+gather_R_di <- function(file, basedir){
     filename <- file.path(basedir, "R", file)
     
     env <- new.env()

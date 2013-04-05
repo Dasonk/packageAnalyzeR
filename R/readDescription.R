@@ -8,7 +8,9 @@ readDescription <- function(basedir){
     des <- read.dcf(dfile, all = TRUE)
     
     name <- des[["Package"]]
+    author <- des[["Author"]]
     license <- des[["License"]]
+    version <- versionScheme(des[["Version"]])
     
     # Extract the number of dependencies
     n.depends <- descValue("Depends", des)
@@ -19,7 +21,9 @@ readDescription <- function(basedir){
 
     
     ans <- c(name = name, 
+             author = author,
              license = license,
+             version = version,
              n.depends = n.depends, 
              n.imports = n.imports, 
              n.suggests = n.suggests)

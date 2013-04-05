@@ -7,14 +7,14 @@ Author: Dason Kurkiewicz
 Maintainer: Dason Kurkiewicz <dasonk@iastate.edu>
 Description: analyzes the source code for R packages.
 License: GPL-3
-Depends:
-    ggplot2,
-    reshape2
+Imports:
+    pacman
 Collate:
     'downloadAndExtract.R'
     'contains_underscores.R'
-    'countRFiles.R'
     'isCamelCase.R'
     'analyzePackage.R'
     'readDescription.R'
     'readRFile.R'
+    'analyzeObjects.R'
+    'analyzeRFolder.R'
