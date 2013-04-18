@@ -11,8 +11,8 @@
 #' \dontrun{
 #' downloadAndExtract("reshape2")
 #' }
-downloadAndExtract <- function(package){
-    tdir <- tempdir()
+downloadAndExtract <- function(package, tdir = tempdir()){
+    # Check if there is a
     downloadeddir <- file.path(tdir, "downloaded_packages")
     file <- grep(paste0("^", package), dir(downloadeddir), value = T)
     if(length(file) == 1){
