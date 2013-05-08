@@ -11,6 +11,8 @@ readDescription <- function(basedir){
     author <- des[["Author"]]
     license <- des[["License"]]
     version <- versionScheme(des[["Version"]])
+    title <- des[["Title"]]
+    description <- des[["Description"]]
     
     # Extract the number of dependencies
     n.depends <- descValue("Depends", des)
@@ -24,6 +26,8 @@ readDescription <- function(basedir){
              author = author,
              license = license,
              version = version,
+             title = title,
+             description = description,
              n.depends = n.depends, 
              n.imports = n.imports, 
              n.suggests = n.suggests)

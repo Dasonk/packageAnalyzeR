@@ -5,6 +5,8 @@
 #' returns the location of the extracted code.
 #' 
 #' @param package Character. Name of the package to download
+#' @param tdir Directory to where to store the source code.
+#' Defaults to a temporary directory
 #' 
 #' @export
 #' @examples
@@ -18,10 +20,10 @@ downloadAndExtract <- function(package, tdir = tempdir()){
     if(length(file) == 1){
         targz <- file.path(downloadeddir, file)
     }else{
-        down <- download.packages(package, destdir = tdir)
+        down <- download.packages(package, destdir = tdir, type = "source")
         targz <- down[,2]
     }
-    
+
     
     untar(targz, exdir = tdir)
     file.path(tdir, package)
