@@ -10,8 +10,8 @@
 #' isCamelCase(funs)
 isCamelCase <- function(funs){
     pattern <- "[a-z][A-Z]"
-    alt <- grepl(pattern, funs)
-    patternlower <- "^[a-z]"
-    startslower <- grepl(patternlower, funs)
-    alt & startslower
+    alternatesLowerToUpper <- grepl(pattern, funs)
+    patternLower <- "^[a-z]"
+    startsLower <- grepl(patternLower, funs)
+    alternatesLowerToUpper & startsLower
 }
