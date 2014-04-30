@@ -9,12 +9,3 @@ Description: analyzes the source code for R packages.
 License: GPL-3
 Imports:
     pacman
-Collate:
-    'downloadAndExtract.R'
-    'contains_underscores.R'
-    'isCamelCase.R'
-    'analyzePackage.R'
-    'readDescription.R'
-    'readRFile.R'
-    'analyzeObjects.R'
-    'analyzeRFolder.R'

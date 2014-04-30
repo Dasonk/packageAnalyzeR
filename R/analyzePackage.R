@@ -1,6 +1,6 @@
 #' Analyze a package
 #' 
-#' Analyze a packageo on CRAN
+#' Analyze a package on CRAN
 #' 
 #' @param package Character. Name of the package to analyze
 #' @param temp logical. If the package isn't currently installed

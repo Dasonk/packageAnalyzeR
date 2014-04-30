@@ -2,7 +2,7 @@
 \alias{analyzePackage}
 \title{Analyze a package}
 \usage{
-  analyzePackage(package, temp = TRUE)
+analyzePackage(package, temp = TRUE)
 }
 \arguments{
   \item{package}{Character. Name of the package to analyze}
@@ -13,6 +13,6 @@
   installs the package permanently.}
 }
 \description{
-  Analyze a packageo on CRAN
+Analyze a package on CRAN
 }
 
